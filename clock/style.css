@@ -58,6 +58,8 @@ body{
     .days_of_the_week{
         justify-content: center;
         padding: 0;
+        top: 30%;
+        transform: translateY(-30%);
     }
     .days_of_the_week li h3{
         display: none;
@@ -68,12 +70,12 @@ body{
     }
     .type_of_clock{
         justify-content: center;
-        margin-left: 40%;
-        width: 20%;
+        margin-left: 35%;
+        width: 30%;
     }
     .button{
         display: none;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         color: #54ff7c;
         border-color: #54ff7c;
     }
@@ -82,4 +84,3 @@ body{
     }
 
 }
-

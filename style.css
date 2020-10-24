@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #8f8f8f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.clock{
+    position: absolute;
+    font-size: 7rem;
+    color: #54ff7c;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-40%);
+}
+
+
+.days_of_the_week{
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 60%;
+    margin-left: 20%;
+    top: 35%;
+    transform: translateY(-35%);
+}
+
+.type_of_clock{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 37.5%;
+    margin-top: 60vh;
+    width: 25%;
+
+}
+
+.button{
+    color: #8f8f8f;
+    padding: 0.5rem;
+    border: #8f8f8f 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.selected{
+    color: #54ff7c;
+    border-color:#54ff7c;
+}
+
+
+@media(max-width:850px){
+    .days_of_the_week{
+        justify-content: center;
+        padding: 0;
+    }
+    .days_of_the_week li h3{
+        display: none;
+        font-size: 2rem;
+    }
+    .clock{
+        font-size: 5rem;
+    }
+    .type_of_clock{
+        justify-content: center;
+        margin-left: 40%;
+        width: 20%;
+    }
+    .button{
+        display: none;
+        font-size: 1.3rem;
+        color: #54ff7c;
+        border-color: #54ff7c;
+    }
+    .selected{
+        display: block;
+    }
+
+}
+

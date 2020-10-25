@@ -48,30 +48,48 @@ function CreateCurentIssuesList(){
     var Container = document.getElementById("curent_issues");
 
     for(var i=0; i<newDescriptionsArray.length;i++){
+
         var issueContainer = document.createElement('div');
         var DescriptionLabel = document.createElement('p');
+        var AssignLabel = document.createElement('span');
+        var PriorityLabel = document.createElement('span');
         var issueDescription = document.createElement('p');
         var issueUser = document.createElement('p');
         var issuePriority = document.createElement('p');
         var Line = document.createElement('hr');
+        var DeleteBtn = document.createElement('p');
 
         issueContainer.setAttribute('id',"issue"+Container.childElementCount);
 
-        issueUser.textContent = `Asign: ${newUsersArray[i]} `;
-        issuePriority.textContent = `Priority: ${newPriorityArray[i]} `;
-        DescriptionLabel.textContent = "Description:"
+        AssignLabel.textContent = "Assiged to:  "; 
+        PriorityLabel.textContent = "Priority:  ";
+        DescriptionLabel.textContent = "Description:";
+        AssignLabel.setAttribute('class',"stand_out");
+        PriorityLabel.setAttribute('class',"stand_out");
+        DescriptionLabel.setAttribute('class',"stand_out");
+        
+        DeleteBtn.textContent="Delete"
+        DeleteBtn.setAttribute('class',"delete_button");
+
+        issueUser.appendChild(AssignLabel);
+        issueUser.appendChild(document.createTextNode(newUsersArray[i]));
+
+        issuePriority.appendChild(PriorityLabel);
+        issuePriority.appendChild(document.createTextNode(newPriorityArray[i]));
+        
         issueDescription.textContent = newDescriptionsArray[i];
 
-    
         issueContainer.appendChild(issueUser);
         issueContainer.appendChild(issuePriority);
         issueContainer.appendChild(DescriptionLabel);
         issueContainer.appendChild(issueDescription);
         issueContainer.appendChild(Line);
+        issueContainer.appendChild(DeleteBtn);
 
         issueContainer.setAttribute('class',"issueContainer");
 
         Container.appendChild(issueContainer);
+
 
     }
 

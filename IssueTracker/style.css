@@ -14,20 +14,23 @@ body{
 }
 
 .container{
+    position: absolute;
     background-color: #f7f7f7;
     padding: 1.5rem 3rem;
     width: 60vw;
     height: 60vh;
-    margin-left: 15vw;
+    left: 50%;
+    transform: translateX(-50%);
     box-shadow: 2px 2px 5px 5px #e1e6e6;
 }
 
 .change_between_issues{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 30vw;
     margin-left: 35vw;
-    margin-top: 3vh;
+    margin-top: 75vh;
 }
 
 .button{
@@ -119,4 +122,18 @@ hr{
     top: 1rem;
     right: 1rem;
     color: red;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    .add_button{
+        width: 15vw;
+    }
+    .change_between_issues{
+        margin-left: 25vw;
+        width: 50vw;
+    }
+    .button{
+        width: 20vw;
+    }
 }

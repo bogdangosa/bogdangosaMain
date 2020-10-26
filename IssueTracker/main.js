@@ -2,6 +2,7 @@
 var newDescriptionsArray = new Array();
 var newUsersArray = new Array();
 var newPriorityArray = new Array();
+var cont = 0;
 
 
 function SwitchMode(clicked_element){
@@ -34,7 +35,7 @@ function AddIssue(){
     // reset the form
     document.getElementById('description').value = '';
     document.getElementById('assign_to').value = '';
-    document.getElementById('priority').value = 'low';
+    document.getElementById('priority').value = 'Low';
 
     //put the data into arrays
     newDescriptionsArray.push(NewDescription);
@@ -48,7 +49,7 @@ function CreateCurentIssuesList(){
     var Container = document.getElementById("curent_issues");
 
     for(var i=0; i<newDescriptionsArray.length;i++){
-
+        
         var issueContainer = document.createElement('div');
         var DescriptionLabel = document.createElement('p');
         var AssignLabel = document.createElement('span');
@@ -59,7 +60,7 @@ function CreateCurentIssuesList(){
         var Line = document.createElement('hr');
         var DeleteBtn = document.createElement('p');
 
-        issueContainer.setAttribute('id',"issue"+Container.childElementCount);
+        issueContainer.setAttribute('id',"issue"+ (++cont));
 
         AssignLabel.textContent = "Assiged to:  "; 
         PriorityLabel.textContent = "Priority:  ";
@@ -70,6 +71,7 @@ function CreateCurentIssuesList(){
         
         DeleteBtn.textContent="Delete"
         DeleteBtn.setAttribute('class',"delete_button");
+        DeleteBtn.setAttribute('onclick',"DeleteIssue("+cont+")");
 
         issueUser.appendChild(AssignLabel);
         issueUser.appendChild(document.createTextNode(newUsersArray[i]));
@@ -98,3 +100,8 @@ function CreateCurentIssuesList(){
     newPriorityArray = new Array();
 }
 
+function DeleteIssue(i){
+    var Container = document.getElementById("curent_issues");
+    var curentIssue = document.getElementById("issue"+i);
+    Container.removeChild(curentIssue);
+}

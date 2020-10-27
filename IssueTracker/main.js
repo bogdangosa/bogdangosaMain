@@ -28,9 +28,16 @@ function SwitchMode(clicked_element){
 
 function AddIssue(){
     // get the data from the user
-    var NewDescription = document.getElementById('description').value; 
-    var NewUser = document.getElementById('assign_to').value; 
-    var NewPriority = document.getElementById('priority').value; 
+    let NewDescription = document.getElementById('description').value; 
+    let NewUser = document.getElementById('assign_to').value; 
+    let NewPriority = document.getElementById('priority').value; 
+
+    if(NewDescription == '' || NewUser == ''){
+        alert("You need to fill all");
+        return;
+    }
+
+
 
     // reset the form
     document.getElementById('description').value = '';
@@ -42,23 +49,22 @@ function AddIssue(){
     newUsersArray.push(NewUser);
     newPriorityArray.push(NewPriority);
 
-
 }
 
 function CreateCurentIssuesList(){
-    var Container = document.getElementById("curent_issues");
+    let Container = document.getElementById("curent_issues");
 
     for(var i=0; i<newDescriptionsArray.length;i++){
         
-        var issueContainer = document.createElement('div');
-        var DescriptionLabel = document.createElement('p');
-        var AssignLabel = document.createElement('span');
-        var PriorityLabel = document.createElement('span');
-        var issueDescription = document.createElement('p');
-        var issueUser = document.createElement('p');
-        var issuePriority = document.createElement('p');
-        var Line = document.createElement('hr');
-        var DeleteBtn = document.createElement('p');
+        let issueContainer = document.createElement('div');
+        let DescriptionLabel = document.createElement('p');
+        let AssignLabel = document.createElement('span');
+        let PriorityLabel = document.createElement('span');
+        let issueDescription = document.createElement('p');
+        let issueUser = document.createElement('p');
+        let issuePriority = document.createElement('p');
+        let Line = document.createElement('hr');
+        let DeleteBtn = document.createElement('p');
 
         issueContainer.setAttribute('id',"issue"+ (++cont));
 
@@ -90,6 +96,7 @@ function CreateCurentIssuesList(){
 
         issueContainer.setAttribute('class',"issueContainer");
 
+
         Container.appendChild(issueContainer);
 
 
@@ -101,7 +108,9 @@ function CreateCurentIssuesList(){
 }
 
 function DeleteIssue(i){
-    var Container = document.getElementById("curent_issues");
-    var curentIssue = document.getElementById("issue"+i);
-    Container.removeChild(curentIssue);
+    let Container = document.getElementById("curent_issues");
+    let curentIssue = document.getElementById("issue"+i);
+    let verrify = confirm("Are you sure you want to delete this?");
+    if(verrify)
+        Container.removeChild(curentIssue);
 }

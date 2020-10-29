@@ -113,6 +113,10 @@ body{
 }
 
 @media(max-width: 500px){
+    .button{
+        font-size: 1rem;
+    }
+
     .cell{
         width: 20vw;
         height: 20vw;
@@ -130,5 +134,10 @@ body{
         width: 14vw;
         height: 14vw;
     }
-
+    #title{
+        font-size: 2rem;
+    }
+    .FinalMsgContainer{
+        font-size: 1rem;
+    }
 }

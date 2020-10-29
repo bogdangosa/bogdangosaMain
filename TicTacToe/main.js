@@ -6,12 +6,21 @@ const CellElements = document.querySelectorAll('[data-cell]')
 const TurnMsg = document.getElementById('TurnMsg')
 const FinalMsgContainer = document.getElementById('FinalMsgContainer')
 const FinalMsg = document.getElementById('FinalMsg')
+const RestartButton = document.getElementById('restart_btn');
 let CircleTurn = false
 let cellsChecked = 0
 
-CellElements.forEach(cell =>{   
-    cell.addEventListener('click',CellClicked ,{once: true})
-})
+StartGame()
+
+function StartGame(){
+    cellsChecked = 0
+    CellElements.forEach(cell =>{  
+        cell.classList.remove(X_CLASS)
+        cell.classList.remove(CIRCLE_CLASS) 
+        cell.addEventListener('click',CellClicked ,{once: true})
+    })
+    FinalMsgContainer.style.display="none"
+}
 
 function CellClicked(e) {
     const cell = e.target
@@ -30,13 +39,14 @@ function CellClicked(e) {
             FinalMsg.innerHTML="CIRCLE WON!"
         else
             FinalMsg.innerHTML="X WON!"
+        return
     }
-
     CircleTurn=!CircleTurn;
     if( ++cellsChecked == 9){
-        FinalMsg.style.display="flex"
+        FinalMsgContainer.style.display="flex"
         FinalMsg.innerHTML="DRAW!"
     }
+    console.log(cellsChecked);
 }
 
 function Verif(){
@@ -67,3 +77,6 @@ function Verif(){
 
     return false
 }
+
+
+RestartButton.addEventListener('click',StartGame)

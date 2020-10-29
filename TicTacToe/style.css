@@ -12,14 +12,9 @@ body{
     font-size: 4rem;
 }
 .button{
-    text-decoration: none;
     color:#F55951;
-    position: absolute;
     font-size: 2rem;
     padding: 1rem 2rem;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%);
     border: 3px #F55951 solid;
     border-radius: 20px;
     cursor: pointer;
@@ -29,6 +24,15 @@ body{
     color:#EDD2CB;
     background-color: #F55951;
 }
+
+.play_btn{
+    position: absolute;    
+    text-decoration: none;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 
 .TurnMsg{
     position: absolute;
@@ -97,12 +101,34 @@ body{
 .FinalMsgContainer{
     font-size: 3rem;
     position: fixed;
+    display: none;
+    flex-direction: column;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: rgba(0,0,0,0.7);
-    display: none;
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width: 500px){
+    .cell{
+        width: 20vw;
+        height: 20vw;
+    }
+    .cell.xCell::before,
+    .cell.xCell::after{
+        width: 2vw;
+        height: 20vw;
+    }
+    .cell.circleCell::before{
+        width: 17vw;
+        height: 17vw;
+    }
+    .cell.cell.circleCell::after{
+        width: 14vw;
+        height: 14vw;
+    }
+
 }

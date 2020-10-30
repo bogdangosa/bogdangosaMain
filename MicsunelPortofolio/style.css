@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #272728;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 6vw;
+}
+h2{
+    font-size: 3vw;
+}
+
+.name_section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5)),url(Photos/camera_wallpaper.jpg) center;
+    background-size: cover;
+}
+
+
+.name{
+    text-transform: uppercase;
+    color: #F2D657;
+    margin-right: 10vw;
+}
+.job{
+    width: 90vw;
+    text-align: end;
+    background-color: #F2D657;
+    padding: 1rem;
+    margin-right:10vw;
+    margin-bottom:20vh;
+    margin-top: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.profile_section{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+.side_photo{
+    width: 40vw;
+    height: 100vh;
+    background: url(Photos/person_photo_blackwhite.jpg) center no-repeat;
+    size: cover;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    width: 60vw;
+    height: 100vh;
+    background-color: #F2D657;
+}
+.profile h2{
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 1rem;
+    margin-left: 10vw;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.profile p{
+    margin-top: 1rem;
+    margin-left: 10vw;
+    width: 30vw;
+}
+.project_section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.project_section h1{
+    display: grid;
+    width: 100vw;
+    height: 20vh;
+    text-transform: uppercase;
+    place-items: center;
+    background-color: #F2D657;
+}
+.projects{
+    display: flex;
+    width: 100vw;
+    height:80vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1f1f1f;
+}
+.project{
+    width: 20vw;
+    height: 20vw;
+    background-color: #fff;
+}
+
+.contact_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(37, 37, 37, 0.5), rgba(31, 31, 31, 0.5)),url(Photos/city_wallpaper.jpg) center;
+    background-size: cover;
+}
+.contact_section h2{
+    width: 40vw;
+    text-align: right;
+    text-transform: uppercase;
+    background-color: #F2D657;
+    padding: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    width: 40vw;
+    padding-right: 5vw;
+}
+.yellow{
+    color: #F2D657;
+}
+.white{
+    color: #fff;
+}

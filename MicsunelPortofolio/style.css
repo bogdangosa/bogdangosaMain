@@ -116,7 +116,7 @@ header ul li:hover{
 .project_section h1{
     display: grid;
     width: 100vw;
-    height: 20vh;
+    height: 20%;
     text-transform: uppercase;
     place-items: center;
     background-color: #F2D657;
@@ -124,7 +124,7 @@ header ul li:hover{
 .projects{
     display: flex;
     width: 100vw;
-    height:80vh;
+    height:80%;
     align-items: center;
     justify-content: space-around;
     background-color: #1f1f1f;
@@ -200,22 +200,26 @@ header ul li:hover{
     }
     .projects{
         flex-direction: column;
-        min-height: 100vh;
+        min-height: 200vh;
     }
     .bulina{
         width: 10vh;
         height: 10vh;
     }
+    .project_section{
+        height: 200vh;
+    }
     .project{
         width: 80vw;
-        height: 40vh;
     }
     .contact_section{
         flex-direction: column;
+        justify-content: space-around;
     }
     .contact_section h2{
-        justify-content: space-around;
         width: 60vw;
+        border-radius: 0.5rem;
+        text-align: center;
     }
     .contact_form{
         height: 40vh;

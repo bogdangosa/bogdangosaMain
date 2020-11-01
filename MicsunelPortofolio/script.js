@@ -18,7 +18,7 @@ window.addEventListener("scroll",function(){
         Header.style.top="0"
         if(ContainedNav){
             Nav.classList.add("visible")  
-            ContainedNav = false
+            ContainedNav= false
         }     
     }
     lastScroll=Scroll;
@@ -27,6 +27,7 @@ window.addEventListener("scroll",function(){
 Hamburger.addEventListener("click",function(){
     const lines = document.getElementsByClassName('line')
     Nav.classList.toggle("visible")
+    Hamburger.classList.toggle("change")
     for(let i=0;i < lines.length;i++)
         lines[i].classList.toggle("whitebg")
 })

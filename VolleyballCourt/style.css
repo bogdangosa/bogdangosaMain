@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #41B3A3;
+}
+
+.court{
+    position: fixed;
+    width: 80vw;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#E8A87C;
+    border: 5px solid #3FEEE6;
+}
+.line{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: #3FEEE6;
+}
+.left{
+    top: 33.33%;
+    left: 33.33%;
+    transform: translate(-33.33%,-33.33%);
+}
+
+.middle{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.right{
+    top: 66.66%;
+    left: 66.66%;
+    transform: translate(-66.66%,-66.66%);
+}
+
+
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+}
+
+.blue{
+    background-color: #190061;
+    color: #3FEEE6;
+    border: 1px solid #3FEEE6;
+}
+.red{
+    background-color: #C03221;
+    color: #F7F7FF;
+    border: 1px solid #F7F7FF;
+}
+.top{
+    top:15%;
+}
+.middle{
+    top:50%;
+}
+.bottom{
+    top:85%;
+}
+
+.linia2{
+    left:15%;
+}
+.linia1{
+    left:40%;
+}
+
+.linia2e2{
+    left:60%;
+}
+.linia1e2{
+    left:85%;
+}
+
+.arrow{
+    position: fixed;
+    right:0;
+    top:2%;
+    width: 5vw;
+    height: 12vh;
+    background-color: #190061;
+    border-radius: 50% 0 0 50%;
+}
+
+.menu{
+    position: fixed;
+    right: -20vw;
+    bottom: 2%;
+    width: 20vw;
+    height: 80vh;
+    border-radius: 25% 0 0 25%;
+    background-color: #190061;
+    transition: 1s;
+}
+.arrline{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 1s;
+}
+.arrline1{
+    top: 50%;
+    left: 30%;
+    transform: rotate(-135deg) translate(-50%,-30%);
+}
+.arrline2{
+    top: 50%;
+    left: 30%;
+    transform: rotate(135deg) translate(-50%,-30%);
+}
+
+.show{
+    right: 0;
+}
+
+.rotateline1{
+    transform: rotate(-405deg);
+}
+.rotateline2{
+    transform: rotate(-135deg);
+}

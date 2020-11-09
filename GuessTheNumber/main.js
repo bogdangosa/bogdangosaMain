@@ -1,27 +1,29 @@
 const THINK_TEXT = "Think of an number between"
 const CHOOSE_TEXT = "Is this your number?"
-const StartBtn = document.getElementById("startBtn")
 const Guess = document.getElementById("guess")
-const HiLoContainer = document.getElementById("HiLoContainer")
-const HigherBtn = document.getElementById("hiBtn")
-const LowerBtn = document.getElementById("loBtn")
-const NrGuessedBtn = document.getElementById("gsBtn")
-const Text = document.getElementById("text")
-const Range= document.getElementById("range")
 let playing = false 
 let guessNr = 500;
 let min = 0;
 let max = 1000;
 
-
+const StartBtn = document.getElementById("startBtn")
 StartBtn.addEventListener("click",StartGame)
+
+const HigherBtn = document.getElementById("hiBtn")
 HigherBtn.addEventListener("click",GoHigher)
+const LowerBtn = document.getElementById("loBtn")
 LowerBtn.addEventListener("click",GoLower)
+
+const NrGuessedBtn = document.getElementById("gsBtn")
 NrGuessedBtn.addEventListener("click",StartGame)
 
 function StartGame(){
-    let MinValue = document.getElementById("minValue");
-    let MaxValue = document.getElementById("maxValue");
+    const HiLoContainer = document.getElementById("HiLoContainer")
+    const Text = document.getElementById("text")
+    const Range= document.getElementById("range")
+    const MinValue = document.getElementById("minValue");
+    const MaxValue = document.getElementById("maxValue");
+    
     min = parseInt(MinValue.innerHTML)
     max = parseInt(MaxValue.innerHTML)
     if(!VerifyMinMaxValues()){
@@ -33,6 +35,7 @@ function StartGame(){
         return;
     }
     guessNr = Average();
+    guessNr = Math.floor(guessNr);
     Guess.innerHTML = guessNr
     StartBtn.classList.toggle("hide")
     Guess.classList.toggle("hide")

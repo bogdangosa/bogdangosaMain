@@ -19,11 +19,11 @@ NrGuessedBtn.addEventListener("click",StartGame)
 
 function StartGame(){
     const HiLoContainer = document.getElementById("HiLoContainer")
-    const Text = document.getElementById("text")
+    const Text = document.getElementById("textTitle")
     const Range= document.getElementById("range")
     const MinValue = document.getElementById("minValue");
     const MaxValue = document.getElementById("maxValue");
-    
+
     min = parseInt(MinValue.innerHTML)
     max = parseInt(MaxValue.innerHTML)
     if(!VerifyMinMaxValues()){
@@ -42,9 +42,9 @@ function StartGame(){
     HiLoContainer.classList.toggle("hide")
     Range.classList.toggle("hide")
     if(playing)
-        Text.innerHTML = THINK_TEXT;
+        Text.innerHTML = THINK_TEXT
     else
-        Text.innerHTML = CHOOSE_TEXT;
+        Text.innerHTML = CHOOSE_TEXT
     playing=!playing;
 }
 function VerifyMinMaxValues(){

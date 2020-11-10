@@ -180,6 +180,11 @@ header{
     width: 40vw;
     padding-right: 5vw;
 }
+
+.hamburger{
+    display: none;
+}
+
 @media(max-width:500px){
     h1{
         font-size: 8vw;
@@ -227,6 +232,7 @@ header{
         transition: 0.5s;
     }
     .hamburger{
+        display: block;
         position: absolute;
         top: 50%;
         right: 5%;
